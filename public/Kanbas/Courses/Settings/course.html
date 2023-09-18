@@ -1,0 +1,193 @@
+<table width="100%">
+    <tr>
+      <td valign="top">
+        <ul>
+            <li> <a href="/Kanbas/Account/Profile/index.html">Account</a></li>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="/Kanbas/Courses/Home/home.html">Courses</a></li>
+            <li> <a href="#">Calendar</a></li>
+            <li><a href="#">Inbox</a></li>
+            <li><a href="#">History</a></li>
+            <li><a href="#">Studio</a></li>
+            <li> <a href="#">Commons</a></li>
+            <li><a href="#">Help</a></li>
+                </ul>
+       </td>
+<td valign="top">
+        <ul>
+            <li> <a href="/Kanbas/Courses/Home/home.html">Home</a></li>
+                    <li><a href="/Kanbas/Courses/Modules/index.html">Modules</a></li>
+                    <li><a href="#">Piazza</a></li>
+                    <li><a href="#">Zoom Meetings</a></li>
+                    <li><a href="/Kanbas/Courses/Assignments/index.html">Assignments</a></li>
+                    <li><a href="#">Quizzes</a></li>
+                    <li><a href="/Kanbas/Courses/Grades/index.html">Grades</a></li>
+                    <li><a href="#">People</a></li>
+                    <li><a href="#">Panopto Video</a></li>
+                    <li><a href="#">Discussions</a></li>
+                    <li><a href="#">Announcements</a></li>
+                    <li><a href="#">Pages</a></li>
+                    <li><a href="#">Files</a></li>
+                    <li><a href="#">Rubrics</a></li>
+                    <li><a href="#">Outcomes</a></li>
+                    <li><a href="#">Collaborations</a></li>
+                    <li><a href="#">Syllabus</a></li>
+                    <li><a href="#">Settings</a></li>
+    </ul>
+</td>
+
+<td valign="top">
+<a href="/Kanbas/Courses/Settings/course.html">Course</a>
+<a href="/Kanbas/Courses/Settings/sections.html">Sections</a>
+<a href="/Kanbas/Courses/Settings/navigation.html">Navigation</a>
+<a href="/Kanbas/Courses/Settings/apps.html">Apps</a>
+<a href="/Kanbas/Courses/Settings/feature.html">Feature Options</a>
+<a href="/Kanbas/Courses/Settings/integration.html">Integrations</a>
+
+<table width="80%" valign="top">
+    <form>
+        <tr>
+            <td>
+                <h3>Course Details</h3>
+            </td>
+        </tr>
+        <tr>
+       <td><label for="labelImage">Image:</label></td>
+       <td><input type="file" id="image" name="image" Choose Image></td> 
+       </tr>
+       <tr> 
+       <td><label for="labelName">Name:</label></td>
+        <td><textbox id="courseName" name="courseName">CS4550 12631 Web development</textbox></td>
+       </tr>
+       <tr>
+       <td><label for="labelCourseCode">Course Code:</label></td>
+       <td><textbox id="courseCode" name="courseCode">CS4550.12631.202410</textbox></td>
+       </tr>
+       <tr>
+        <td><label for="labelBluePrint">Bluepeint Course:</label></td>
+        <td><textbox id="bluePrint" name="bluePrint">No</textbox></td>
+       </tr> 
+        <tr>
+        <td><label for="labelCourseTemplate">Course Template:</label></td> 
+        <td><input type="checkbox" value="Enable course as course template" id="courseTemplate" name="courseTemplate" disabled="disabled">Enable course as course template</input></td> 
+        </tr>
+        <tr>
+        <td><label for="labelTimeZone">Time Zone:</label></td>
+        <td><select name="timeZone">
+            <option>
+                Eastern time(US & Canada)(-05:00/-04:00)
+            </option>
+        </select></td>
+        </tr>
+        <tr>
+        <td> <label for="labelSisId">SIS ID:</label></td>
+        <td><textbox id="SisId" name="SisId">CS4550.12631.202410</textbox></td>
+        </tr>
+        <tr>
+        <td><label for="labelSubAccount">Sub Account:</label></td>
+        <td><textbox id="SubAccount" name="SubAccount">CS Undergrad</textbox></td>
+        </tr>
+        <tr>
+        <td><label for="labelTerm">Term:</label></td>
+        <td><textbox id="term" name="term">202410_1 Fall 2023 Semester Full Term</textbox><br><br></td>
+        </tr>
+        <tr>
+        <td><label for="labelParticipation">Participation:</label></td>
+        <td><select id="Participation" name="Participation">
+            <option value="term">Term</option>
+            </select><br>
+            <p style="font-size: small;">Course participation is limited to <b>term</b> start and end dates</p>
+        </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+               <h4> Start</h4>
+               <input name="startDate" id="startDate" type="date">
+               <h4>
+                   <h4>End date</h4>
+                   <input name="endDate" id="endDate" type="date">
+               </h4><br>
+               <input name="restrict" id="restrict" type="checkbox">Restrict students from viewing course before term start date</input><br>
+               <input name="restrict" id="restrict" type="checkbox">Restrict students from viewing course before term end date</input><br><br>
+            </td> <br><br>
+        </tr>
+        <tr>
+            <td><label for="labelDueTime">Default due time:</label></td>  
+            <td><select id="dueTime" name="dueTime">
+                <option value="Account Default">Account default (11:59pm)</option>
+            </select><br>
+            <p style="font-size: small;">This influences the user interface for setting due dates. 
+            It does not change the time due for any existing system</p>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="labelLanguage">Language:</label></td>  
+            <td><select id="language" name="language">
+                <option value="Not set">Not set (user-configurable,defaults to English(United states)</option>
+            </select><br>
+            <p style="font-size: small;">This will override any user/system language prefrences. This is only recommended for foreign language courses</p>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="labelFileStorage">File Storage:</label></td>
+            <td><textbox id="fileStorage" name="fileStorage">10000 megabytes</textbox></td>
+        </tr>
+        <tr>
+            <td><label for="labelLargeCourse">Large Course:</label></td>
+            <td><input type="checkbox" id="fileStorage" name="fileStorage">Launch SpeedGrader Filtered by Student Group</textbox></td>
+        </tr>
+        <tr>
+            <td><label for="labelGrading">Grading Scheme:</label></td>
+            <td><input type="checkbox" id="gradingScheme" name="gradingScheme">Enable course grading scheme</textbox></td>
+        </tr>
+        <tr>
+            <td><label for="labelLicense">License:</label></td>  
+            <td><select id="license" name="license">
+                <option value="copyrighted">Private (Copyrighted)</option>
+            </select><i class="fas fa-question-circle"></i>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="labelFileCopyright">File Copyright:</label></td>
+            <td><input type="checkbox" id="fileCopyRight" name="fileCopyRight">Copyright and license information must be provided for files before they are published</input></td><br><br>
+        </tr>
+        <tr>
+            <td><label for="labelVisibility">Visibility:</label></td>  
+            <td><textbx>If you need to make your course public please contact your administrator/support</textbx><br>
+            <select>
+                <option value="visibility">Course</option>
+            </select><br>
+            <input type="checkbox" id="courseIndex" name="courseIndex">Include this course in the public course index</input>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="labelFormat">Format:</label></td>  
+            <td><select id="format" name="format">
+                <option value="On-campus">On-Campus</option>
+            </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="labelMysteryPath">Mystery Paths:</label></td>
+            <td><input type="checkbox" id="mysteryPath" name="mysteryPath">Enable individual learning paths for students based on assessment</input></td>
+        </tr>
+        <tr>
+            <td><label for="labelDescription">Description:</label></td>
+            <td><textarea rows="5" cols="50"></textarea><br>
+                <a href="#">more options</a>
+            </td>
+            
+        </tr>
+        <tr>
+            <td valign="right">
+            <button>Update Course Details</button>
+            </td>
+        </tr>
+        
+        </form>
+    </tr>
+</table>
+</td>
+</tr>
+</table>
