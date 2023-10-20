@@ -1,0 +1,17 @@
+.bc-text{
+    color:red;
+}
+
+.todo-text{
+    color:red;
+}
+
+.sm-text{
+    font-size: small;
+}
+.md-text{
+    font-size: 15px;
+}
+.assignment-list-group{
+    width:75%
+}

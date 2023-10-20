@@ -1,0 +1,173 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.sidebar {
+    height: 100%;
+    min-width: 75px;
+    max-width: 85px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    padding: 20px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    margin: 5px 0;
+}
+
+.icons {
+    margin-bottom: 5px;
+    font-size: 24px;
+    color: red;
+}
+
+.selected-sidebar {
+ background-color: white;
+ color:red
+}
+
+.selected-sidebar-icon {
+    color:grey;
+    margin-bottom: 5px;
+    font-size: 24px;
+   }
+
+.account-navigation{
+    text-decoration: none;
+    width:190px;
+    max-width: 200px;
+    min-width: 190px;
+    padding: 20px;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    justify-content: space-between;
+    text-wrap: wrap;
+    margin:0px 10px 0 80px;
+    top:0;
+}
+.account-navigation a{
+    color:red;
+    text-decoration: none;
+    margin-bottom: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+.selected-link{
+    color:black;
+    border-left: 5px solid black;
+    padding-left: 10px;
+}
+.selected-link span{
+    margin-left:8px;
+    padding-left:2px;
+}
+
+.header {
+    display:inline-block;
+    margin-left:10px;
+
+}
+
+.menu-bar {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin-left: 80px;
+}
+
+.menu-icon {
+    margin-right: 30px;
+    padding: 0;
+    width: 40px;
+    height: 30px;
+    border: 0px;
+    background-color: transparent;
+    color:red;
+
+}
+
+.menu-bar-name{
+    color:grey;
+    font-size: 20px;
+    margin-left: 5px;
+}
+
+.edit-profile{
+    padding:8px;
+    margin-left: auto;
+    margin-right:20px
+}
+
+
+
+.profile-container{
+    width: 100%;
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between; 
+    margin-left: 190px; 
+    flex-wrap: wrap;
+}
+
+.right-content{
+    width:100%;
+    float:right;
+    margin-right:10px;
+}
+th{
+display: table-cell;
+vertical-align: inherit;
+font-weight: bold;
+text-align: center;
+}
+.button-final{
+    text-align: right;
+}
+.sidebar img{
+    width: 55px;
+    height:auto;
+    margin-bottom: 10px;
+}
+.red-text{
+    color:red !important;
+}
+@media screen and (max-width: 768px) {
+
+    .sidebar{
+        display: none;
+    }
+    .account-navigation {
+        display: none; 
+    }
+
+    .wrapper {
+        padding-left: 10px; 
+        padding-right: 10px;
+    }
+
+    .profile-container {
+        flex-direction: column;
+        width: 100%; 
+        float: none; 
+    }
+    .right-content {
+        width: 100%;
+        margin-top: 10px;
+    }
+}

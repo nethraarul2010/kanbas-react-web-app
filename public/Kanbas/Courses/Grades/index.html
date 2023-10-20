@@ -1,3 +1,220 @@
+<html>
+<head>
+<link href="style.css" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <header class="sidebar">
+        <a href="/Kanbas/Account/Profile/index.html">
+            <img src="../../logo/NU.png">
+        </a>
+
+        <a href="/Kanbas/Account/Profile/index.html">
+            <i class="fa-solid fa-house icons"></i>
+            <span >Account</span>
+        </a>
+        <a href="/Kanbas/Dashboard/index.html">
+            <i class="fa-solid fa-gauge icons"></i>
+            <span>Dashboard</span>
+        </a>
+        <a href="/Kanbas/Courses/Home/home.html">
+            <i class="fa-solid fa-book icons"></i>
+            <span>Courses</span>
+        </a>
+        <a href="#">
+            <i class="fa-regular fa-calendar icons"></i>
+            <span>Calendar</span>
+        </a>
+        <a href="#">
+            <i class="fa-solid fa-inbox icons"></i>
+                <span>Inbox</span>
+        </a>
+        <a href="#">
+            <i class="fa-solid fa-clock-rotate-left icons"></i>
+            <span>History</span>
+        </a>
+        <a href="#">
+            <i class="fa-solid fa-circle-play icons"></i>
+            <span>Studio</span>
+        </a>
+        <a href="#">
+            <i class="fa-solid fa-circle-info icons"></i>
+            <span>Help</span>
+        </a>
+    </header>
+        <div class="bc-navbar">
+            <button class="menu-icon"><i class="fa-solid fa-bars fa-xl"></i></button>
+            <nav style="--bs-breadcrumb-divider: '>'; padding:10px; margin-top:10px;" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="#" class="bc-text">CS 4156.Fall 2023.678496</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Grades</li>
+                </ol>
+            </nav>
+        </div>
+            <hr>
+            <div class="account-navigation">
+                    <a href="/Kanbas/Courses/Home/home.html">
+                        <i class="fa-solid fa-house mr-2"></i>
+                        Home</a>
+                     <a href="/Kanbas/Courses/Modules/index.html">
+                        <i class="fa-solid fa-spinner mr-2"></i>
+                        Modules</a> 
+                     <a href="#">
+                        <i class="fa-solid fa-plug mr-2"></i>
+                        Piazza
+                     </a>  
+                     <a href="#">
+                        <i class="fa-solid fa-globe mr-2"></i>
+                        Zoom Meetings</a>  
+                     <a href="/Kanbas/Courses/Assignments/index.html">
+                        <i class="fa-regular fa-pen-to-square mr-2"></i>
+                        Assignments</a>  
+                     <a href="#">
+                        <i class="fa-solid fa-rocket mr-2"></i>
+                        Quizzes</a>  
+                     <a href="/Kanbas/Courses/Grades/index.html"  class="selected-link">
+                        <i class="fa-solid fa-user-graduate mr-2"></i>
+                        Grades</a>  
+                     <a href="#">
+                        <i class="fa-solid fa-users mr-2"></i>
+                        People</a>  
+                     <a href="#">
+                        <i class="fa-solid fa-plug mr-2"></i>
+                        Panopto Video</a>  
+                     <a href="#">
+                        <i class="fa-regular fa-comments mr-2"></i>
+                        Discussions</a>  
+                     <a href="#">
+                        <i class="fa-solid fa-bullhorn mr-2"></i>
+                        Announcements</a>  
+                     <a href="#">
+                        <i class="fa-regular fa-file mr-2"></i>
+                        Pages</a>  
+                     <a href="#">
+                        <i class="fa-regular fa-file mr-2"></i>
+                        Files</a>  
+                     <a href="#">
+                        <i class="fa-regular fa-newspaper mr-2"></i>
+                        Rubrics</a>  
+                     <a href="#">
+                        <i class="fa-solid fa-bullseye mr-2"></i>
+                        Outcomes</a>  
+                     <a href="#">
+                        <i class="fa-solid fa-users mr-2"></i>
+                        Collaborations</a>  
+                     <a href="#">
+                        <i class="fa-solid fa-book mr-2"></i>
+                        Syllabus</a>  
+                     <a href="/Kanbas/Courses/Settings/course.html">
+                        <i class="fa-solid fa-gear mr-2"></i>
+                        Settings</a>  
+            </div>
+            
+            <div class="container mt-4"> 
+            <div class="md-6 float-end ml-auto">
+                <button class="btn bg-light border-secondary">
+                    <i class="fa-solid fa-file-import mr-2"></i>
+                    Import
+                </button>
+                <button class="btn bg-light dropdown-toggle border-secondary" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa-solid fa-file-export mr-2"></i>
+                    Export
+                </button>
+                <button class="btn bg-light border-secondary">
+                    <i class="fa-solid fa-gear"></i>
+                </button>
+            </div> </div>
+            <div class="mt-5">
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="labelSubmission">Student Names</label>
+                            <input type="text" class="form-control" placeholder=" &#x1F50D   Search Students">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="labelSubmission">Assignment Names</label>
+                            <input type="text" class="form-control" placeholder="&#x1F50D   Search Assignments">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col mt-2">
+                    <button class="btn bg-light border-secondary">
+                        <i class="fa-solid fa-filter mr-2"></i>
+                        Apply filters</button>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                <div class="col">
+                    <div class="container mt-4">
+                        <table class="table table-striped text-center table-responsive">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th class="align-middle">Student Name</th>
+                                    <th class="align-middle">A1 SETUP<br>Out of 100</th>
+                                    <th class="align-middle">A2 HTML<br>Out of 100</th>
+                                    <th class="align-middle">A3 CSS<br>Out of 100</th>
+                                    <th class="align-middle">A4 BOOTSTRAP<br>Out of 100</th>
+                                    <th class="align-middle">A5 REACT<br>Out of 100</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="color:red;" class="align-middle">Nethra Arul</td>
+                                    <td class="align-middle">100</td>
+                                    <td class="align-middle"><input value="99" type="number" class="form-control text-center bg-transparent"></td>
+                                    <td class="align-middle">99</td>
+                                    <td class="align-middle">92</td>
+                                    <td class="align-middle">91</td>
+                                </tr>
+                                <tr>
+                                    <td class="todo-text align-middle">Ashwin ramkumar</td>
+                                    <td class="align-middle">98</td>
+                                    <td class="align-middle">99</td>
+                                    <td class="align-middle">97</td>
+                                    <td class="align-middle"><input value="99" type="number" class="form-control text-center bg-transparent"></td>
+                                    <td class="align-middle">99</td>
+                                </tr>
+                                <tr>
+                                    <td style="color:red;" class="align-middle">Shoba Rajeshwar</td>
+                                    <td class="align-middle">99</td>
+                                    <td class="align-middle"><input value="99" type="number" class="form-control text-center bg-transparent"></td>
+                                    <td class="align-middle">99</td>
+                                    <td class="align-middle">98</td>
+                                    <td class="align-middle">97</td>
+                                </tr>
+                                <tr>
+                                    <td class="todo-text align-middle">Roopasri K</td>
+                                    <td class="align-middle">100</td>
+                                    <td class="align-middle">98</td>
+                                    <td class="align-middle">94</td>
+                                    <td class="align-middle"><input value="99" type="number" class="form-control text-center bg-transparent"></td>
+                                    <td class="align-middle">97</td>
+                                </tr>
+                                <tr>
+                                    <td style="color:red;" class="align-middle">Ramana Prabakaran</td>
+                                    <td class="align-middle">99</td>
+                                    <td class="align-middle">91</td>
+                                    <td class="align-middle"><input value="99" type="number" class="form-control text-center bg-transparent"></td>
+                                    <td class="align-middle">91</td>
+                                    <td class="align-middle">99</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+            </div>
+            </div>
+            
+            </body>
+            </html>
+
+
+<!--
 <table>
     <tr>
         <td valign="top">
@@ -153,3 +370,6 @@
     </tbody>
 </table>
 </td>
+</tr>
+</table>
+-->
