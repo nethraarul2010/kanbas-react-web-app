@@ -1,0 +1,39 @@
+.course-card {
+    width: 270px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 7px;
+    padding: 10px;
+    float: left;
+
+}
+
+.decoration{
+    text-decoration: none;
+}
+
+.courses{
+    margin-left: 150px;
+}
+
+.card-text {
+    color: gray;
+    text-overflow: ellipsis;
+}
+
+.heading{
+    margin-left:150px;
+    margin-top: 10px;
+}
+
+.font-color{
+    color:red;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .sidebar {
+        display: none;
+    }
+}

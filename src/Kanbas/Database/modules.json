@@ -1,0 +1,55 @@
+[
+
+  { "course":"RS101",  "name":"Resources" },
+
+  { "course":"RS101",  "name":"Required Textboook" },
+
+  { "course":"RS101",  "name":"Week-0 - INTRO" },
+
+  { "course":"RS101",  "name":"Week-1 - HTML" },
+
+  { "course":"RS102",  "name":"Resources" },
+
+  { "course":"RS102",  "name":"Required Textboook" },
+
+  { "course":"RS102",  "name":"Week-0 - INTRO" },
+
+  { "course":"RS102",  "name":"Week-1 - HTML" },
+
+  { "course":"RS103",  "name":"Resources" },
+
+  { "course":"RS103",  "name":"Required Textboook" },
+
+  { "course":"RS103",  "name":"Week-0 - INTRO" },
+
+  { "course":"RS103",  "name":"Week-1 - HTML" },
+
+  { "course":"RS104",  "name":"Resources" },
+
+  { "course":"RS104",  "name":"Required Textboook" },
+
+  { "course":"RS104",  "name":"Week-0 - INTRO" },
+
+  { "course":"RS104",  "name":"Week-1 - HTML" },
+
+  { "course":"RS105",  "name":"Resources" },
+
+  { "course":"RS105",  "name":"Required Textboook" },
+
+  { "course":"RS105",  "name":"Week-0 - INTRO" },
+
+  { "course":"RS105",  "name":"Week-1 - HTML" },
+
+  { "course":"RS106",  "name":"Resources" },
+
+  { "course":"RS106",  "name":"Required Textboook" },
+
+  { "course":"RS106",  "name":"Week-0 - INTRO" },
+
+  { "course":"RS106",  "name":"Week-1 - HTML" }
+
+
+
+ 
+
+]

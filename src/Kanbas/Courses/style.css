@@ -1,0 +1,82 @@
+.margin-styling{
+    margin-left:150px;
+    margin-top:15px;
+}
+
+.menu-bar {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin-left: 5px;
+}
+
+.wd-courseNav-spanText {
+
+    margin-left: 120px;
+    color: grey;
+    font-size: .8em;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 130px;
+    display: block;
+    overflow: hidden;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+.menu-icon {
+    padding: 0;
+    border: 0px;
+    font-size: large;
+    background-color: transparent;
+    color:red;
+}
+
+.menu-bar-name{
+    color:grey;
+    font-size: 20px;
+    margin-left: 5px;
+}
+
+.breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 0;
+    margin-bottom: 0;
+    list-style: none;
+    margin-left: 120px;
+    font-size: small;
+
+}
+.courses-container {
+    position: relative;
+  }
+  
+  .content-container {
+    padding-top: 50px; /* Adjust the value as needed to create space below the navigation bar */
+    overflow-y: scroll;
+    position: fixed;
+    bottom: 0;
+    end: 0;
+    left: 320px;
+    top: 50px;
+  }
+  
+
+ 
+
+.wd-breadcrumb-custom {
+    --bs-breadcrumb-divider: '>';
+    padding-top:10px;
+
+}
+
+ 
+
+li.breadcrumb-item {
+    color: rgb(214, 4, 4);
+    font-size: 1.5em;
+    padding-left: 15px;
+
+}
