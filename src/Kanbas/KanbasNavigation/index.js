@@ -16,7 +16,7 @@ function KanbasNavigation() {
   ];
 
   const { pathname } = useLocation();
-
+  
   return (
     <div className="d-flex list-group custom-sidebar" style={{ width: 110 }}>
       <img src='/NU.png' alt="NU Logo" />
