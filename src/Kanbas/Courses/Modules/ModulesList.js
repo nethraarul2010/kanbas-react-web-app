@@ -2,18 +2,27 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import db from "../../Database";
 import "./style.css";
+import { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import {
-  FaBars,
+  addModule,
+  deleteModule,
+  updateModule,
+  setModule,
+} from "./modulesReducer";
+import {
   FaRegCheckCircle,
   FaPlus,
-  FaList,
   FaCheckCircle,
-  FaEllipsisV
+  FaTimesCircle,
+  FaEdit
 } from "react-icons/fa";
 
 function ModuleList() {
   const { courseId } = useParams();
-  const modules = db.modules;
+  const modules = useSelector((state) => state.modulesReducer.modules);
+  const module = useSelector((state) => state.modulesReducer.module);
+  const dispatch = useDispatch();
 
   return (
     <div>
@@ -33,30 +42,47 @@ function ModuleList() {
           </button>
         </div>
       </div>
-      <ul className="list-group assignment-list-group">
+      <ul className="list-group assignment-list-group w-100">
+      <li className="w-50">
+        <input className="form-control mb-2" value={module.name}
+          onChange={(e) =>
+            dispatch(setModule({ ...module, name: e.target.value }))
+          }/>
+
+        <textarea className="form-control mb-2" value={module.description}
+          onChange={(e) => dispatch(setModule({ ...module, description: e.target.value }))
+        }/>
+
+        
+        <button className="btn btn-danger me-2 mb-2"  onClick={() => dispatch(addModule({ ...module, course: courseId }))}>Add</button>
+        <button className="btn btn-secondary mb-2"   onClick={() => dispatch(updateModule(module))}>Update</button>
+      </li>
         {modules
           .filter((module) => module.course === courseId)
           .map((module, index) => (
-            <li key={index} className="list-group-item list-group-item-secondary list-group-item-modules">
-              <div className="d-flex w-100 justify-content-between align-items-center">
-                <div>
-                  <FaList className="me-3" /> {/* Add margin here */}
-                </div>
+            <li key={index} className="list-group-item list-border-green">
+              <div className="d-flex justify-content-between align-items-center">
                 <div className="flex-grow-1 pt-3">
-                  <p>{module.name}</p>
+                  <h5>{module.name}</h5>
+                  <p>{module.description}</p>
+                  <p>{module._id}</p>
                 </div>
                 <div className="ml-3">
-                  <FaCheckCircle className="me-2 mb-1 font-color-g" /> {/* Add margin here */}
-                  <FaPlus className="me-2 mb-1" /> {/* Add margin here */}
-                  <FaEllipsisV className="mb-1" /> {/* Add margin here */}
+                  <FaCheckCircle className="me-2 mb-1 font-color-g" /> 
+                  <FaPlus className="me-2 mb-1"/> 
+                  <FaEdit className="me-2 mb-1"  onClick={() => dispatch(setModule(module))}/>
+
+                  <FaTimesCircle className="mb-1" onClick={() => dispatch(deleteModule(module._id))}/>
+
                 </div>
               </div>
             </li>
           ))
         }
+
       </ul>
     </div>
   );
-}
 
+      }
 export default ModuleList;

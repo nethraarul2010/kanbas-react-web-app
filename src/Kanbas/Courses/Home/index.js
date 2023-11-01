@@ -19,10 +19,10 @@ function Home() {
   return (
     <div>
       <div className="row">
-        <div className="col-md-9"> {/* Adjust the column width as needed */}
+        <div className="col-9"> {/* Adjust the column width as needed */}
         <ModuleList/>
         </div>
-        <div className="col-md-3"> 
+        <div className="col"> 
           <Status />
         </div>
       </div>

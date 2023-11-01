@@ -11,11 +11,11 @@ import { FaBars} from "react-icons/fa";
 import { useLocation } from "react-router-dom";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
 import Grades from "./Grades";
-function Courses() {
+function Courses({courses}) {
   const { courseId } = useParams();
   const { pathname } = useLocation();
   const lastItem = pathname.substring(pathname.lastIndexOf('/') + 1);
-  const course = db.courses.find((course) => course._id === courseId);
+  const course = courses.find((course) => course._id === courseId);
   
   return (
     <div>
