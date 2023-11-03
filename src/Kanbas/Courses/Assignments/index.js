@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import db from "../../Database";
 import { FaPlus, FaList, FaCheckCircle, FaEllipsisV, FaEdit } from 'react-icons/fa';
 import "./style.css";
+import AssignmentEditor from "./AssignmentEditor";
+import { useNavigate } from 'react-router-dom';
 
 function Assignments() {
   const { courseId } = useParams();
@@ -10,6 +12,10 @@ function Assignments() {
   const courseAssignments = assignments.filter(
     (assignment) => assignment.course === courseId
   );
+  const navigate = useNavigate();
+ const OpenEditor = (id) =>{
+  navigate(`/Kanbas/Courses/RS101/Assignments/${id}`);
+ }
 
   return (
     <div>
@@ -24,7 +30,7 @@ function Assignments() {
               <FaPlus className="me-2" />
               Group
             </button>
-            <button className="btn btn-danger">
+            <button className="btn btn-danger" onClick={()=>OpenEditor("A401")}>
               <FaPlus className="me-2" />
               Assignment
             </button>

@@ -115,5 +115,18 @@
     "assignTo": "Everyone",
     "due": "2021-10-14",
     "availableFrom": "2021-11-06",
+    "until": "2021-12-08" },
+    { "_id": "A401", "title": " ", "course": " ","due":" ", "points":" ",
+    "group": " ",
+    "grade": " ",
+    "submissionType": " ",
+    "onlineEntry": [" ", " "],
+    "submissionAttempts": " ",
+    "plagiarismReview": " ",
+    "groupAssignments": true,
+    "peerReviews": true,
+    "assignTo": " ",
+    "due": "2021-10-14",
+    "availableFrom": "2021-11-06",
     "until": "2021-12-08" }
   ]
