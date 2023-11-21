@@ -10,7 +10,6 @@ import { CardBody, CardTitle, CardText } from "react-bootstrap";
 function Dashboard(
   {courses,course,setCourse,addNewCourse,deleteCourse,updateCourse}
 ){
- 
  const noOfCourses = courses.length;
 
   return (
