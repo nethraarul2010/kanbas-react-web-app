@@ -10,6 +10,7 @@ import { CardBody, CardTitle, CardText } from "react-bootstrap";
 function Dashboard(
   {courses,course,setCourse,addNewCourse,deleteCourse,updateCourse}
 ){
+  
  const noOfCourses = courses.length;
 
   return (
@@ -29,32 +30,34 @@ function Dashboard(
              onChange={(e) => setCourse({ ...course, endDate: e.target.value }) } />
       </div>
       <button className="btn btn-danger courses mb-2 mt-2" onClick={addNewCourse}>Add new course</button>
-      <button className="btn btn-danger courses mb-2 mt-2" onClick={updateCourse}>Update course</button>
+      <button className="btn btn-danger courses mb-2 mt-2" onClick={() => {updateCourse(course);}}>Update course</button>
       <div class="courses">
-        {courses.map((course) => (
-          <Card key={course._id} className="course-card">
-             <Card.Img src="/NU.png"/>
-            <CardBody class="course-body">
-              <Link to={`/Kanbas/Courses/${course._id}`} class="decoration">
-                <CardTitle>{course.name}</CardTitle>
-                <CardText>
-                  {course.number}<br />
-                  Start-date: {course.startDate}<br />
-                  End-date: {course.endDate}
-                </CardText>
-                <Icon.PencilSquare className="font-color me-2" onClick={(event) => {
-                event.preventDefault();
-                setCourse(course);
-              }}/>
-                <button className="btn btn-danger float-end" onClick={(event) => {
-                event.preventDefault();
-                deleteCourse(course._id);
-              }}>
-                Delete</button>
+{courses.map((courseItem) =>{ console.log(courseItem); return(
+  <Card key={courseItem._id} className="course-card">
+    <Card.Img src="/NU.png"/>
+    <CardBody class="course-body">
+      <Link to={`/Kanbas/Courses/${courseItem._id}`} class="decoration">
+        <CardTitle>{courseItem.name}</CardTitle>
+        <CardText>
+          {courseItem.number}<br />
+          Start-date: {courseItem.startDate}<br />
+          End-date: {courseItem.endDate}
+        </CardText>
+        <Icon.PencilSquare className="font-color me-2" onClick={(event) => {
+          event.preventDefault();
+          setCourse(courseItem);
+        }}/>
+        <button className="btn btn-danger float-end" onClick={(event) => {
+          event.preventDefault();
+          deleteCourse(courseItem);
+        }}>
+          Delete
+        </button>
               </Link>
             </CardBody>
           </Card>
-        ))}
+      )})}
+ 
       </div>
     </div>
   );

@@ -2,13 +2,14 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import db from "../../Database";
 import "./style.css";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import {
   addModule,
   deleteModule,
   updateModule,
   setModule,
+  setModules,
 } from "./modulesReducer";
 import {
   FaRegCheckCircle,
@@ -17,12 +18,38 @@ import {
   FaTimesCircle,
   FaEdit
 } from "react-icons/fa";
-
+import { findModulesForCourse,createModule } from "./client";
+import * as client from "./client"
 function ModuleList() {
   const { courseId } = useParams();
   const modules = useSelector((state) => state.modulesReducer.modules);
   const module = useSelector((state) => state.modulesReducer.module);
   const dispatch = useDispatch();
+
+  const handleAddModule = () => {
+    createModule(courseId, module).then((module) => {
+      dispatch(addModule(module));
+    });
+  };
+
+  const handleDeleteModule = (moduleId) => {
+    client.deleteModule(moduleId).then((status) => {
+      dispatch(deleteModule(moduleId));
+    });
+  };
+
+  const handleUpdateModule = async () => {
+    const status = await client.updateModule(module);
+    dispatch(updateModule(module));
+  };
+
+
+  useEffect(() => {
+    findModulesForCourse(courseId)
+      .then((modules) =>
+        dispatch(setModules(modules))
+    );
+  }, [courseId]);
 
   return (
     <div>
@@ -54,8 +81,8 @@ function ModuleList() {
         }/>
 
         
-        <button className="btn btn-danger me-2 mb-2"  onClick={() => dispatch(addModule({ ...module, course: courseId }))}>Add</button>
-        <button className="btn btn-secondary mb-2"   onClick={() => dispatch(updateModule(module))}>Update</button>
+        <button className="btn btn-danger me-2 mb-2"  onClick={handleAddModule}>Add</button>
+        <button className="btn btn-secondary mb-2"   onClick={handleUpdateModule}>Update</button>
       </li>
         {modules
           .filter((module) => module.course === courseId)
@@ -72,7 +99,8 @@ function ModuleList() {
                   <FaPlus className="me-2 mb-1"/> 
                   <FaEdit className="me-2 mb-1"  onClick={() => dispatch(setModule(module))}/>
 
-                  <FaTimesCircle className="mb-1" onClick={() => dispatch(deleteModule(module._id))}/>
+                  <FaTimesCircle className="mb-1" onClick={() => handleDeleteModule(module._id)}
+/>
 
                 </div>
               </div>

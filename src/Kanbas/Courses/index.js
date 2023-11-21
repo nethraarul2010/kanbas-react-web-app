@@ -11,12 +11,23 @@ import { FaBars} from "react-icons/fa";
 import { useLocation } from "react-router-dom";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
 import Grades from "./Grades";
-function Courses({courses}) {
+import axios from "axios";
+import { useState,useEffect } from "react";
+function Courses() {
   const { courseId } = useParams();
+  const URL = "http://localhost:4000/api/courses";
   const { pathname } = useLocation();
   const lastItem = pathname.substring(pathname.lastIndexOf('/') + 1);
-  const course = courses.find((course) => course._id === courseId);
-  
+  const [course, setCourse] = useState({});
+  const findCourseById = async (courseId) => {
+    const response = await axios.get(
+      `${URL}/${courseId}`
+    );
+    setCourse(response.data);
+  };
+  useEffect(() => {
+    findCourseById(courseId);
+  }, [courseId]);
   return (
     <div>
     <nav className="wd-breadcrumb-custom" >
