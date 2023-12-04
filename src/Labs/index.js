@@ -10,6 +10,7 @@ import Nav from "../../src/Nav";
 import { Provider } from 'react-redux';
 import store from "./store";
 import Assignment5 from './a5';
+import Assignment6 from './a6/users';
 
 function Labs() {
     return(
@@ -26,6 +27,8 @@ function Labs() {
         element={<Assignment4/>}/>
         <Route path="a5"
         element={<Assignment5/>}/>
+        <Route path="a6/*"
+        element={<Assignment6/>}/>
      </Routes>
      </Provider>
    </div>
