@@ -14,6 +14,7 @@ function Signup() {
       setError(err.response.data.message);
     }
   };
+  
   return (
     <div className="container mt-5">
       <h1 className="text-center">Signup</h1>

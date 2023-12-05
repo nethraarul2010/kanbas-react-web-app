@@ -49,9 +49,9 @@ const { id } = useParams();
           <input className="form-control mb-2" placeholder="Last name" value={account.lastName}
             onChange={(e) => setAccount({ ...account,
               lastName: e.target.value })}/>
-          <input className="form-control mb-2" placeholder="DOB" value={account.dob}
+          {/* <input className="form-control mb-2" placeholder="DOB" value={account.dob}
             onChange={(e) => setAccount({ ...account,
-              dob: e.target.value })}/>
+              dob: e.target.value })}/> */}
           <input className="form-control mb-2" placeholder="Email" value={account.email}
             onChange={(e) => setAccount({ ...account,
               email: e.target.value })}/>
